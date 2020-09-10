@@ -49,8 +49,6 @@ public class FieldMapping {
 		return type;
 	}
 	
-//	hay alguna forma de traernos desde la app todos los labels y field types desde salesforce?
-//	de ser posible habría que crear una clase aparte que tenga la lista de todos los campos de salesForce y nos ayudaría a mantener la clase actuailizada a tiempo
 	public String returnLabel(String sf_FieldName) {
 		String label = "";
 		
