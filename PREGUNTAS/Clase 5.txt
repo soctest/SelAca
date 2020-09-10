@@ -1,0 +1,18 @@
+SUMMARY: Vimos como crear una clase usando el concepto de POO.
+
+ACLARACIÓN. Esto es algo que me surgió en el trabajo y justo ese día vimos este tema se me ocurrió que podría implementarlo como solución al problema que tengo.
+
+CONTEXTO: En este ejercicio creé una clase que se llama 'FieldMapping' que a priori es muy similar a la clase 'persona' que vimos en vivo el otro día.
+Lo que cambia es que:
+- "en vez de setearle un valor statico en el método principal de esa clase, le asigné una función que me devuelve un valor que se obtiene de otras funciones que depende del input asignado."
+Esas funciones son 'returnLabel' y 'returnType'. Ambas, en este momento se asemejan y se que podría meterlas en un sola función y en una clase aparte, pero por ahora lo hice así para que se entienda el objetivo.
+
+OBJETIVO: El objetivo de esta idea es crear una clase XX parecida a la de 'ObjectRepository' o 'ElementFactory' en donde guardaré una lista de campos con su tipo de campo que luego instanciaré para poder usarlos de acuerdo a la necesidad del momento.
+
+PREGUNTA: Mis preguntas son:
+	- Si bien yo podría armar un excel con esta información y minimizar lineas de código, ¿estaría mal pensar en hacerlo de esta manera usando POO?
+	- Al fin y al cabo, ¿Mantener la clase sería lo mismo que si tuviese que mantener un excel?
+	- De ser necesario, ¿En que casos debemos considerar de armar una clase usando este concepto de POO?
+
+-----
+
