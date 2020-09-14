@@ -8,10 +8,10 @@ public class Ejercicio4 {
 	private int nroPaginas;
 	
 	public Ejercicio4() {
-		this.iSBN = 0;
+		this.iSBN = 77652;
 		this.titulo = "Ejercicio4";
 		this.autor = "sebastian couto";
-		this.nroPaginas = 0;
+		this.nroPaginas = 97;
 	}
 
 	public Ejercicio4(int unISBN, String unTitulo, String unAutor, int nroPaginas) {
@@ -21,36 +21,40 @@ public class Ejercicio4 {
 		this.nroPaginas = nroPaginas;
 	}
 
-	public void setISBN() {
-		
+	public void setISBN(int unISBN) {
+		this.iSBN = unISBN;
 	}
 	
-	public void getISBN() {
-		
+	public int getISBN() {
+		return this.iSBN;
+				
 	}
 	
-	public void setTitulo() {
-		
+	public void setTitulo(String unTitulo) {
+		this.titulo = unTitulo;
 	}
 	
-	public void getTitulo() {
-		
+	public String getTitulo() {
+		return this.titulo;
 	}
 	
-	public void setAuthor() {
-		
+	public void setAuthor(String unAutor) {
+		this.autor = unAutor;
 	}
 	
-	public void getAuthor() {
-		
+	public String getAuthor() {
+		return this.autor;
 	}
 	
-	public void setNroPaginas() {
-		
+	public void setNroPaginas(int nroPaginas) {
+		this.nroPaginas = nroPaginas;
 	}
 
-	public void getNroPaginas() {
-		
+	public int getNroPaginas() {
+		return this.nroPaginas;
 	}
 	
+	public String toString() {
+		return "El libro: "+ this.titulo +" con codigo: "+ this.iSBN +" del autor: "+ this.autor +", tiene '"+ this.nroPaginas +"' paginas";
+	}
 }
