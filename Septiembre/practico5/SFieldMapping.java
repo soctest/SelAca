@@ -1,6 +1,6 @@
-package poo;
+package practico5;
 
-public class FieldMapping {
+public class SFieldMapping {
 
 	private String type;
 	private String label;
@@ -10,12 +10,12 @@ public class FieldMapping {
 	private String inputP = "input-Picklist";
 	private String multiP = "multi-Pickist";
 	
-	public FieldMapping(String sf_FieldName) {		
+	public SFieldMapping(String sf_FieldName) {		
 		this.label = returnLabel(sf_FieldName);
 		this.type = returnType(sf_FieldName);
 	}
 	
-	public FieldMapping(String sf_FieldName, String sf_FieldType) {
+	public SFieldMapping(String sf_FieldName, String sf_FieldType) {
 		this.type = sf_FieldType;
 		this.label = sf_FieldName;
 	}

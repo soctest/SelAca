@@ -1,4 +1,4 @@
-package poo;
+package practico5;
 
 public class MainProgram {
 
@@ -10,11 +10,13 @@ public class MainProgram {
 
 	public static void sf_returning() {
 		
-		FieldMapping sf_FieldMapping = new FieldMapping("A");
+		SFieldMapping sf_FieldMapping = new SFieldMapping("A");
 		String recordType = sf_FieldMapping.getType();
 		String recordLabel = sf_FieldMapping.getLabel();
 		
 		System.out.println(recordLabel);
 		System.out.println("El record Type es: "+ recordType);
 	}
+	
+	
 }
