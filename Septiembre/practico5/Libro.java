@@ -1,20 +1,20 @@
 package practico5;
 
-public class Ejercicio4 {
+public class Libro {
 	
 	private int iSBN;
 	private String titulo;
 	private String autor;
 	private int nroPaginas;
 	
-	public Ejercicio4() {
-		this.iSBN = 77652;
-		this.titulo = "Ejercicio4";
-		this.autor = "sebastian couto";
-		this.nroPaginas = 97;
+	public Libro() {
+	this.iSBN = 0;
+		this.titulo = "Sin Titulo";
+		this.autor = "";
+		this.nroPaginas = 0;
 	}
 
-	public Ejercicio4(int unISBN, String unTitulo, String unAutor, int nroPaginas) {
+	public Libro(int unISBN, String unTitulo, String unAutor, int nroPaginas) {
 		this.iSBN = unISBN;
 		this.titulo = unTitulo;
 		this.autor = unAutor;
@@ -43,7 +43,7 @@ public class Ejercicio4 {
 	}
 	
 	public String getAuthor() {
-		return this.autor;
+		return this.autor;	
 	}
 	
 	public void setNroPaginas(int nroPaginas) {
@@ -54,7 +54,25 @@ public class Ejercicio4 {
 		return this.nroPaginas;
 	}
 	
-	public String toString() {
-		return "El libro: "+ this.titulo +" con codigo: "+ this.iSBN +" del autor: "+ this.autor +", tiene '"+ this.nroPaginas +"' paginas";
+	private boolean autorVacio() {
+		if (this.autor != "") {
+			return false;
+		} else {
+			return true;
+		}
 	}
+	
+	public String toString() {
+		
+		String retorno = "El libro '"+ this.titulo +"' con ISBN '"+ this.iSBN +"'";
+		
+		if (autorVacio()) {
+			retorno = retorno  +" por el autor 'desconocido' tiene '"+ this.nroPaginas +"' paginas.";
+		} else {
+			retorno = retorno  +" por el autor '"+ this.autor +"' tiene '"+ this.nroPaginas +"' paginas.";
+		}
+	
+		return retorno;
+	}
+
 }

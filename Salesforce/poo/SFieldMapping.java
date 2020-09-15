@@ -1,4 +1,4 @@
-package practico5;
+package poo;
 
 public class SFieldMapping {
 
