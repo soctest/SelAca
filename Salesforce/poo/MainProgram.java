@@ -9,11 +9,13 @@ public class MainProgram {
 
 	public static void sf_returning() {
 		
-		SFieldMapping sf_FieldMapping = new SFieldMapping("A");
-		String recordType = sf_FieldMapping.getType();
-		String recordLabel = sf_FieldMapping.getLabel();
+		SFieldMapping sf_FieldMapping = new SFieldMapping("B");
 		
-		System.out.println(recordLabel);
+		String recordLabel = sf_FieldMapping.getType();
+		String recordType = sf_FieldMapping.getLabel();
+		
 		System.out.println("El record Type es: "+ recordType);
+		System.out.println("El record Label es: "+ recordLabel);
+		
 	}
 }

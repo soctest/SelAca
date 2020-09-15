@@ -11,8 +11,12 @@ public class SFieldMapping {
 	private String multiP = "multi-Pickist";
 	
 	public SFieldMapping(String sf_FieldName) {		
-		this.label = returnLabel(sf_FieldName);
-		this.type = returnType(sf_FieldName);
+		if (returnRecord(sf_FieldName)[0] != null) {
+			this.label = returnRecord(sf_FieldName)[0];
+			this.type = returnRecord(sf_FieldName)[1];
+		} else {
+			System.out.println(sf_FieldName +" does not exist in the test class.");
+		}
 	}
 	
 	public SFieldMapping(String sf_FieldName, String sf_FieldType) {
@@ -36,34 +40,22 @@ public class SFieldMapping {
 		return this.type;
 	}
 	
-	public String returnType(String sf_FieldName) {
-		String type = "";
+	public String[] returnRecord(String sf_FieldName) {
 		
-		switch (sf_FieldName) {
-			case "A": type = input;	 break;
-			case "B": type = picklist; break;
-			case "C": type = inputP; break;
-			case "D": type = multiP; break;
+		String[] sfRecord = new String[2];
+		sfRecord[0] = null;
+		sfRecord[1] = null;
+		
+		if (sf_FieldName != null || sf_FieldName != "") {			
+			switch (sf_FieldName) {
+				case "A": sfRecord[0] = input; sfRecord[1] = "Entro por A"; break;
+				case "B": sfRecord[0] = picklist; sfRecord[1] = "Entro por B"; break;
+				case "C": sfRecord[0] = inputP; sfRecord[1] = "Entro por C"; break;
+				case "D": sfRecord[0] = multiP; sfRecord[1] = "Entro por D"; break;
+			}			
 		}
-
-		return type;
+		
+		return sfRecord;
 	}
 	
-	public String returnLabel(String sf_FieldName) {
-		String label = "";
-		
-		switch (sf_FieldName) {
-			case "A": label = "Entro por A"; break;
-			case "B": label = "Entro por B"; break;
-			case "C": label = "Entro por C"; break;
-			case "D": label = "Entro por D"; break;
-		}
-		
-		if (label != "") {
-			return label;
-		} else {
-			System.out.println("FIELD does not EXIST!!");
-			return "";
-		}
-	}
 }
