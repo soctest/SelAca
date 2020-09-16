@@ -10,13 +10,12 @@ public class SFieldMapping {
 	private String inputP = "input-Picklist";
 	private String multiP = "multi-Pickist";
 	
+	String[] sfRecord = new String[2];
+	
+	//TODOS LOS TIPOS DE CAMPOS QUE NECESITO TRABAJAR
 	public SFieldMapping(String sf_FieldName) {		
-		if (returnRecord(sf_FieldName)[0] != null) {
-			this.label = returnRecord(sf_FieldName)[0];
-			this.type = returnRecord(sf_FieldName)[1];
-		} else {
-			System.out.println(sf_FieldName +" does not exist in the test class.");
-		}
+		this.type = returnRecord(sf_FieldName)[0];//Type
+		this.label = returnRecord(sf_FieldName)[1];//Label
 	}
 	
 	public SFieldMapping(String sf_FieldName, String sf_FieldType) {
@@ -41,21 +40,16 @@ public class SFieldMapping {
 	}
 	
 	public String[] returnRecord(String sf_FieldName) {
-		
-		String[] sfRecord = new String[2];
-		sfRecord[0] = null;
-		sfRecord[1] = null;
-		
-		if (sf_FieldName != null || sf_FieldName != "") {			
-			switch (sf_FieldName) {
-				case "A": sfRecord[0] = input; sfRecord[1] = "Entro por A"; break;
-				case "B": sfRecord[0] = picklist; sfRecord[1] = "Entro por B"; break;
-				case "C": sfRecord[0] = inputP; sfRecord[1] = "Entro por C"; break;
-				case "D": sfRecord[0] = multiP; sfRecord[1] = "Entro por D"; break;
-			}			
+
+		switch (sf_FieldName) {
+			case "A": sfRecord[0] = input; sfRecord[1] = "Entro por A"; break;
+			case "B": sfRecord[0] = picklist; sfRecord[1] = "Entro por B"; break;
+			case "C": sfRecord[0] = inputP; sfRecord[1] = "Entro por C"; break;
+			case "D": sfRecord[0] = multiP; sfRecord[1] = "Entro por D"; break;
+			//AGREGAR LOS CAMPOS QUE SE VAN A ESTAR CUBRIENDO EN ESTE METODO
 		}
 		
-		return sfRecord;
+		return sfRecord;		
 	}
-	
+
 }
