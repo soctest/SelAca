@@ -1,4 +1,4 @@
-package com.poo;
+package poo;
 
 public class SFieldMapping extends SalesforceRepository{
 

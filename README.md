@@ -1,7 +1,6 @@
 # SelAca
 Aplicando conocimientos del Curso
 
-POO class
 #Summary
 Por lo general, esta informacion se encuentra alojada en un excel y cada vez que es necesario realizar un nuevo caso, hay que volver a definir el tipo y el nombre del campo nuevamente en un nuevo excel o sheet. A lo largo del tiempo, la mantencion se volverá tediosa.
 
@@ -13,4 +12,3 @@ En esta clase, es donde estan TODOS los campos de la aplicacion que concidere al
 
 "En el caso que quiera agregar, modificar o quitar algun campo, el unico mantenimiento seria solo sobre esta clase"..
 
-EJERCICO6 class
