@@ -1,4 +1,4 @@
-package practico6;
+package com.Clase6;
 
 import java.util.Scanner;
 

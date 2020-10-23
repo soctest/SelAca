@@ -1,4 +1,4 @@
-package poo;
+package com.poo;
 
 public class SalesforceRepository{
 
