@@ -1,4 +1,4 @@
-package poo;
+package salesforce;
 
 public class MainProgram {
 	
