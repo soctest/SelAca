@@ -6,7 +6,6 @@
 *.log
 
 # Project and Setting files
-*.project
 *.settings
 
 # BlueJ files
